@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" 
+  integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" 
+  crossorigin="anonymous">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=4">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.wrap { padding: 15px; }
+h1 { font-size: 28px; }
+h4,
+modal-title { font-size: 18px; font-weight: bold; }
+
+.no-borders { border: 0px; }
+.body-message { font-size: 18px; }
+.centered { text-align: center; }
+.btn-primary { background-color: #2086c1; border-color: transparent; outline: none; border-radius: 8px; font-size: 15px; padding: 10px 25px; }
+.btn-primary:hover { background-color: #2086c1; border-color: transparent; }
+.btn-primary:focus { outline: none; }
+
+
+.flat-table {
+		margin-bottom: 100px;
+		border-collapse:collapse;
+		font-family: 'Lato', Calibri, Arial, sans-serif;
+		border: none;
+                border-radius: 0.3px;
+               -webkit-border-radius: 0.2px;
+               -moz-border-radius: 0.2px;
+	              width: 100%;
+    
+}
+
+	.flat-table th, .flat-table td {
+		box-shadow: inset 0 -1px rgba(0,0,0,0.25), 
+			inset 0 1px rgba(0,0,0,0.25);
+	}
+	.flat-table th {
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+		padding: 0.1em;
+		text-shadow: 0 0 1px rgba(0,0,0,0.1);
+		font-size: 0.8em;
+	}
+	.flat-table td {
+		color: #000000;
+		padding: 1.2em 0.2em 1.1em 0.3em;
+		text-shadow: 0 0 1px rgba(255,255,255,255);
+		font-size: 0.8em;
+	}
+	.flat-table tr {
+		-webkit-transition: background 0.3s, box-shadow 0.3s;
+		-moz-transition: background 0.3s, box-shadow 0.3s;
+		transition: background 0.3s, box-shadow 0.3s;
+	}
+	
+	.flat-table-2 tr:hover {
+		background:	rgb(232,232,232);
+	}
+	.flat-table-2 {
+		background: #C8C8C8;
+	}
+    
+    .content {
+  max-width: 300px;
+  margin: auto;
+}
+.glow {
+  font-size: 11px;
+  color: red;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #FF0000, 0 0 20px #fff, 0 0 30px #f5e90a, 0 0 40px #f5e90a, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 30px #fff, 0 0 30px #ff4da6, 0 0 40px #25befa, 0 0 50px #25befa, 0 0 60px #ff4da6, 0 0 70px #25befa, 0 0 80px #FF0000;
+  }
+}
+
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<style type="text/css">
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 100%;
+margin: 0 auto;
+display: none;
+position: fixed;
+z-index: 101;
+}
+.cnt223{
+min-width: 400px;
+width: 400px;
+min-height: 150px;
+margin: 100px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+padding: 15px 35px;
+border-radius: 5px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 10px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #d91900;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 15px;
+left: 22px;
+position: relative;
+top: -25px;
+width: 24px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+</style>
+<script type='text/javascript'>
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup').show();
+$('.close').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+
+ 
+
+  <script src="verify.js"></script> 
+
+<body class="w3-light-grey">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Page Container -->
+
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="primer.png" style="width:90%" class="center" alt="Avatar">
+          <div class="w3-display w3-container w3-text-black">
+          </div>
+        </div>        <div class="w3-container">
+         <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large"></i>Tutora/Áreas</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large"></i>ANGELICA C. MUÑOZ HUILLCAYA </p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large font size="1"></i>tutor.1er.grado@albertohidalgo.edu.pe</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large"></i>986385014</p>
+           <hr>
+
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right"></i>Nuestras Fotos</b></p>
+          
+          
+          <br>
+
+             <div class="w3-light-grey w3-round-xlarge">
+          </div>
+        
+        </div>
+      </div>
+
+    <!-- End Left Column -->
+    </div>
+
+        <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+       
+          <div class="col-sm-4">
+    
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+.tg td{font-family:Arial, sans-serif;font-size:10px;padding:08px 3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+.tg th{font-family:Arial, sans-serif;font-size:10px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#409cff;}
+.tg .tg-pry0{border-color:#340096;text-align:left;vertical-align:middle}
+.tg .tg-rbev{font-weight:bold;border-color:#360096;text-align:left;vertical-align:middle}
+.tg .tg-jv6w{border-color:#340096;text-align:left;vertical-align:top}
+</style>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-fn5d{color:rgb(0, 0, 0);border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-h9da{font-weight:bold;color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-omgv{color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-gnn6{font-weight:bold;color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-mzba{color:rgb(17, 85, 204);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-hw4h{color:rgb(0, 0, 255);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-uzvj{font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-9e4f{color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:top}
+</style>
+<table class=" flat-table-1"   >
+<table class="flat-table flat-table-2"width: 30%; >
+<thead>
+    	<tR><H3><CENTER><b></b></CENTER></H3></tR>
+    	</thead>
+
+		<th><b></b></th>
+		<th><b></b></th>
+		<th><b></b></th>
+	<thead>
+		<th><b>Docente</b></th>
+		<th><b>ÁREA/LINKS</b></th>
+		<th><b>ZOOM</b></th>
+	</thead>
+	<tbody>
+		<tr>
+            <td>ANGELICA C. MUÑOZ HUILLCAYA</td>
+			<td class="tg-hw4h"><a href="https://missangelicaprimergrado.blogspot.com/">TUTORIA</a></td>
+			<td><a href="">Haz click aquí para ir al ZOOM de la tutora de Primer Grado</a></td>
+		</tr>
+		<tr>
+            <td class="tg-omgv">EVERT EDUARDO CARDENAS CARDENAS</td>
+            <td><a href="https://aprendiendoencasaconlibertad.blogspot.com/">1er grado inglés</a></td>
+        	<td><a href="">Haz click aquí para ir al ZOOM de Inglés</a></td>
+
+		</tr>
+		<tr>
+            <td>ELIZABETH MORALES MUÑOZ</td>
+            <td class="tg-mzba"><a href="https://tecnologiaieah1ergrado.blogspot.com/">1 grado tecnología</a></td>
+        	<td><a href="">Haz click aquí para ir al ZOOM de Tecnología</a></td>
+
+		</tr>
+		<tr>
+		    <td class="tg-omgv">ELARD ARTURO COASACA ALARCON</td>
+            <td class="tg-hw4h"><a href="http://elarturo21.blogspot.com/">1 grado ed. física</a></td>
+        	<td><a href="">Haz click aquí para ir al ZOOM de Ed. Física</a></td>
+		</tr>
+	</tbody>
+</table>
+        </div>
+      
+      </div>
+
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+
+  <!-- End Page Container -->
+ <!-- End Page Container -->
+
+  <div class="w3-twothird">
+    
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+       
+          <div class="col-sm-8">
+    
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;border-color:#9ABAD9;}
+.tg td{font-family:Arial, sans-serif;font-size:15px;padding:08px 3px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#444;background-color:#EBF5FF;}
+.tg th{font-family:Arial, sans-serif;font-size:15px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#9ABAD9;color:#fff;background-color:#409cff;}
+.tg .tg-pry0{border-color:#340096;text-align:left;vertical-align:middle}
+.tg .tg-rbev{font-weight:bold;border-color:#360096;text-align:left;vertical-align:middle}
+.tg .tg-jv6w{border-color:#340096;text-align:left;vertical-align:top}
+</style>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-lboi{border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-fn5d{color:rgb(0, 0, 0);border-color:inherit;text-align:left;vertical-align:middle}
+.tg .tg-h9da{font-weight:bold;color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-omgv{color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-gnn6{font-weight:bold;color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-mzba{color:rgb(17, 85, 204);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-hw4h{color:rgb(0, 0, 255);border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-uzvj{font-weight:bold;border-color:inherit;text-align:center;vertical-align:middle}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-9e4f{color:rgb(0, 0, 0);border-color:inherit;text-align:center;vertical-align:down}
+</style>
+<table class=" flat-table-1"   >
+<table class="flat-table flat-table-2"width: 30%; >
+	<thead>
+    	<tR><H3><CENTER><b>COMUNICADOS IMPORTANTES</b></CENTER></H3></tR>
+    	</thead>
+	<tbody>
+	<tr>
+			<td class="tg-hw4h"><a href="PLAN DE RECUPERACION DEL SERVICIO EDUCATIVO A.H..pdf" target="_blank">Enlace a Plan de Recuperación</a>
+			&nbsp &nbsp 
+			</td>
+			
+
+			<td class="tg-hw4h"><a href="https://albertohidalgo.edu.pe/intranet/anexo1.html" target="_blank">Enlace al ANEXO 1</a></td>
+
+		</tr>
+
+
+	
+	</tbody>
+</table>
+
+        </div>
+      
+      </div>
+
+
+
+    <!-- End Right Column -->
+    </div>
+
+          <button type="button" class="btn btn-secondary" onclick="location.href = 'logout.php'" style="float: right;" >Cerrar Sesión</button>
+
+
+  <!-- End Page Container -->
+
+
+
+<!-- Right-side Column Content Section -->
+	<aside class="col-sm-2">
+      <?php include('info-col.php'); ?> 
+	</aside>
+  </div>
+    
+<!-- Footer Content Section -->
+<footer class="jumbotron text-center row"
+
+style="padding-bottom:1px; padding-top:8px;">
+  <?php include('footer.php'); ?>
+</footer>
+</div>
+</div>
+
+</body>
+</html>
